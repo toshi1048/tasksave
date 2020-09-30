@@ -1,0 +1,14 @@
+.contents
+  h1 ログイン
+  
+  = link_to '新規登録', new_admin_user_path, class: 'btn btn-primary'
+
+  = form_with scope: :session,local: true do |f|
+    .form-group
+      = f.label :email, 'メールアドレス'
+      = f.text_field :email, class: 'form-control', id: 'session_email'
+    .form-group
+      = f.label :password, 'パスワード'
+      = f.password_field :password, class: 'form-control', id: 'session_password'
+    = f.submit 'Login', class: 'btn btn-primary'
+  
