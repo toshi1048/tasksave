@@ -1,24 +1,36 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+・アプリ名
+ Taskapp
 
-Things you may want to cover:
+・概要(このアプリでできることを書いて下さい)
+ ログインを行い、自分のタスクの登録を行う音ができる
+ タスクは画像のアップロードが可能
 
-* Ruby version
+・制作背景(意図)
+　⇒日々の作業や予定の管理を行うため
 
-* System dependencies
+・DEMO
 
-* Configuration
 
-* Database creation
+・DB設計
+ ## tasksテーブル
+ 
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false,unique: true|
+|description|text|null: false|
 
-* Database initialization
+# Assosiation
+belongs_to :user
 
-* How to run the test suite
+## usersテーブル
 
-* Services (job queues, cache servers, search engines, etc.)
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|email|string|null: false|
+|password_digest|string|null: false|
 
-* Deployment instructions
-
-* ...
+# Assosiation
+has_many :tasks
