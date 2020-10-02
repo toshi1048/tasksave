@@ -6,3 +6,5 @@ FactoryBot.define do
     admin {t}
   end
 end
+
+##テスト用のユーザーのカラム
