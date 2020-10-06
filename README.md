@@ -34,3 +34,4 @@ belongs_to :user
 
 # Assosiation
 has_many :tasks
+
