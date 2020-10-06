@@ -84,7 +84,7 @@ VSCode
   
   
 
-・課題や今後実装したい機能
+・課題や今後実装したい機能  
  レイアウトを簡素な物ではなく見やすく工夫していきたい。  
  いくつかのタスクをまとめて一度に登録できるような機能があれば更に効率的なアプリにすることができると感じる。  
  非同期通信を導入すればよりスムーズにアクションができるのではないかと感じる
@@ -93,18 +93,18 @@ VSCode
 
 
 ・DB設計
- ## tasksテーブル
+ # tasksテーブル
  
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false,unique: true|
 |description|text|null: false|
 
-# Association
+## Association
 belongs_to :user
 has_many :active_storage_attachments
 
-## usersテーブル
+# usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -112,10 +112,10 @@ has_many :active_storage_attachments
 |email|string|null: false|
 |password_digest|string|null: false|
 
-# Association
+## Association
 has_many :tasks
 
-## active_storage_blobsテーブル
+# active_storage_blobsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |key|string|null: false, unique: true|
@@ -126,14 +126,14 @@ has_many :tasks
 |checksum|string|null: false|
 |created_at|datetime|null: false|
 
-# Assosiation
+## Assosiation
 has_many :active_storage_attachments
 
 
 
 
 
-## active_storage_attachmentsテーブル
+# active_storage_attachmentsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
@@ -141,6 +141,6 @@ has_many :active_storage_attachments
 |blob|references|null: false|
 |created_at|datetime|null: false|
 
-# Association
+## Association
 belongs_to :tasks
 belongs_to :active_storage_blobs
