@@ -1,5 +1,7 @@
 .contents
   h1 タスクの新規登録
+  .login_name
+    = current_user.name
   .nav.justify-content-end
     = link_to '一覧', tasks_path, class: 'nav-link'
   

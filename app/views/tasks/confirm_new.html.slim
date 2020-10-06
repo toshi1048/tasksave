@@ -1,5 +1,7 @@
 .contents
   h1 登録内容の確認
+  .login_name
+    = current_user.name
 
   = form_with model: @task, local: true do |f|
     table.table.table-hover
