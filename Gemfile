@@ -70,3 +70,7 @@ gem 'bootstrap'
 gem 'rails_autolink'
 gem 'ransack'
 gem 'kaminari'
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end
